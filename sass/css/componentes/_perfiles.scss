@@ -1,0 +1,52 @@
+.perfil {
+	width: 50%;
+	padding-top: 50px;
+	color: $Color-claro;
+	background-color: $Color-secundario;
+
+	&__avatar {
+		display: block;
+		margin: 0 auto;
+		border-radius: 50em;
+		font-family: $Fuente2;
+	}
+	&__nombre {
+		text-align: center;
+		font-size: 25px;
+        @include titulos($Fuente2);
+	}
+	&__titulo {
+		display: block;
+		text-align: center;
+		font-weight: 700;
+		font-size: 12px;
+        color: get-opacity($Color-claro, .5);
+        @include titulos($Fuente1);
+	}
+	&__boton {
+		display: block;
+		font-family: $Fuente2;
+		width: 100px;
+		height: 40px;
+		margin: 15px auto;
+		padding-top: 5px;
+		border-radius: 20px;
+		text-decoration: none;
+		text-align: center;
+		color: $Color-claro;
+        background-color: get-opacity($Color-primario, .5);
+        border: 2px solid get-opacity($Color-claro, .5);
+        @include titulos($Fuente1);
+	}
+
+    .perfil__minibio {
+		margin: 0 auto;
+		padding-top: 20px;
+		h2 {
+			@extend .perfil__nombre;
+		}
+		h3 {
+			@extend .perfil__titulo;
+		}
+	}
+}
